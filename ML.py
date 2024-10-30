@@ -44,9 +44,6 @@ if submitted:
         'company_size': [company_size],
         'employment_type': [employment_type]
     })
-    st.write("### Données Saisies :")
-    st.write(input_data)
-
     # Prédiction avec le modèle SVR
     prediction = svr_model.predict(input_data)
     prediction_usd = np.expm1(prediction)  # Convert back from log scale
